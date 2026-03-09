@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:bickelkohl.com.br)",
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:savassiagronegocio.com.br)",
+      "Bash(where cwebp)",
+      "Bash(where magick)",
+      "Bash(where ffmpeg)",
+      "Bash(node -e \"console.log\\(''node ok''\\)\")",
+      "Bash(npx --yes sharp-cli --version)",
+      "Bash(npm install sharp --save-dev)",
+      "Bash(du -sh imgs/website/*.JPG imgs/website/*.jpg)",
+      "Bash(du -sh imgs/website/*.webp)"
+    ]
+  }
+}

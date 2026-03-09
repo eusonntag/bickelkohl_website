@@ -1,0 +1,19 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Original JPG files (site uses WebP versions)
+imgs/website/*.JPG
+imgs/website/*.jpg
+
+# City source image folders (not used by the website)
+imgs/Augusto Pestana/
+imgs/Carazinho/
+imgs/Catuípe/
+imgs/Frederico Westphalen/
+imgs/Ijuí/
+imgs/Palmeira das Missões/
+imgs/Sarandi/
+imgs/Seberi/
+imgs/Tenente Portela/
