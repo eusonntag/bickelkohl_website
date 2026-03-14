@@ -12,7 +12,8 @@
       "Bash(npm install sharp --save-dev)",
       "Bash(du -sh imgs/website/*.JPG imgs/website/*.jpg)",
       "Bash(du -sh imgs/website/*.webp)",
-      "Bash(ls \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\"\" | grep \"img-header \")"
+      "Bash(ls \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\"\" | grep \"img-header \")",
+      "Bash(del \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\01_palmeira_aerial_full.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\02_palmeira_aerial_angle.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\03_palmeira_facade_branding.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\04_palmeira_landscape.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\05_ijui_aerial_blusky.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\06_ijui_aerial_road.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\07_catuipe_supergasbras_sign.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\08_catuipe_city_aerial.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\09_tenente_portela_city_sky.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\10_tenente_portela_city2.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\11_frederico_gasfacil_kiosk.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\12_seberi_loja_botijoes.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\13_sarandi_caminhao_entrega.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\14_augusto_pestana_aerial.webp\" \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\\\\15_sarandi_city_aerial.webp\")"
     ]
   }
 }
