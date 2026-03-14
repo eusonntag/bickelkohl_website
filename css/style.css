@@ -748,6 +748,7 @@ section {
 
 .maquina24h__images img {
   width: 100%;
+  aspect-ratio: 3/4;
   border-radius: var(--radius-lg);
   object-fit: cover;
   box-shadow: var(--shadow-lg);

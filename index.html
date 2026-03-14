@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Preload recursos críticos (LCP) -->
+  <link rel="preload" as="image" href="imgs/website/img-header-principal-desktop.webp" fetchpriority="high" media="(min-width: 769px)">
+  <link rel="preload" as="image" href="imgs/website/img-header-principal-mobile.webp" fetchpriority="high" media="(max-width: 768px)">
+
   <!-- SEO primário -->
   <title>BickelKohl | Distribuidora de Gás GLP no Noroeste Gaúcho — SuperGasbras</title>
   <meta name="description" content="Distribuidora autorizada SuperGasbras no noroeste do Rio Grande do Sul. Entrega de gás GLP residencial, comercial e industrial em Palmeira das Missões, Ijuí, Frederico Westphalen, Carazinho e mais 7 cidades. Ligue 0800 991 2525.">
@@ -141,8 +145,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"></noscript>
 </head>
 
 <body>
@@ -193,7 +197,7 @@
     <div class="hero__bg">
       <picture>
         <source media="(max-width: 768px)" srcset="imgs/website/img-header-principal-mobile.webp">
-        <img src="imgs/website/img-header-principal-desktop.webp" alt="BickelKohl vista aérea" loading="eager" fetchpriority="high">
+        <img src="imgs/website/img-header-principal-desktop.webp" alt="BickelKohl vista aérea" loading="eager" fetchpriority="high" width="1920" height="1080" decoding="sync">
       </picture>
     </div>
     <div class="hero__overlay"></div>
@@ -251,16 +255,16 @@
   <!-- Gallery Strip -->
   <section class="gallery">
     <div class="gallery__track">
-      <div class="gallery__item"><img src="imgs/website/img-header-01.webp" alt="BickelKohl — base de distribuição de gás GLP em Palmeira das Missões" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-02.webp" alt="BickelKohl — vista aérea da distribuidora SuperGasbras" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-03.webp" alt="BickelKohl — fachada e identidade visual da distribuidora de gás" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-04.webp" alt="BickelKohl — área de operações de entrega de gás GLP" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-05.webp" alt="BickelKohl — unidade em Ijuí, RS" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-06.webp" alt="BickelKohl — operações logísticas de distribuição de gás no noroeste gaúcho" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-07.webp" alt="BickelKohl — ponto de venda de gás SuperGasbras em Catuípe" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-08.webp" alt="BickelKohl — cidade atendida pela distribuidora de gás GLP" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-09.webp" alt="BickelKohl — entrega de gás GLP em Tenente Portela, RS" loading="lazy"></div>
-      <div class="gallery__item"><img src="imgs/website/img-header-10.webp" alt="BickelKohl — frota e operações de distribuição de gás no Rio Grande do Sul" loading="lazy"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-01.webp" alt="BickelKohl — base de distribuição de gás GLP em Palmeira das Missões" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-02.webp" alt="BickelKohl — vista aérea da distribuidora SuperGasbras" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-03.webp" alt="BickelKohl — fachada e identidade visual da distribuidora de gás" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-04.webp" alt="BickelKohl — área de operações de entrega de gás GLP" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-05.webp" alt="BickelKohl — unidade em Ijuí, RS" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-06.webp" alt="BickelKohl — operações logísticas de distribuição de gás no noroeste gaúcho" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-07.webp" alt="BickelKohl — ponto de venda de gás SuperGasbras em Catuípe" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-08.webp" alt="BickelKohl — cidade atendida pela distribuidora de gás GLP" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-09.webp" alt="BickelKohl — entrega de gás GLP em Tenente Portela, RS" loading="lazy" decoding="async"></div>
+      <div class="gallery__item"><img src="imgs/website/img-header-10.webp" alt="BickelKohl — frota e operações de distribuição de gás no Rio Grande do Sul" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -277,7 +281,7 @@
       </div>
       <div class="sobre__grid">
         <div class="sobre__image fade-in">
-          <img src="imgs/website/img-solucoes.webp" alt="Base BickelKohl Palmeira das Missões" loading="lazy">
+          <img src="imgs/website/img-solucoes.webp" alt="Base BickelKohl Palmeira das Missões" loading="lazy" decoding="async">
         </div>
         <div class="sobre__info fade-in">
           <p class="section__tag section__tag--dark">Nossas Soluções</p>
@@ -301,7 +305,7 @@
       <div class="servicos__grid">
         <div class="servico-card fade-in">
           <div class="servico-card__img">
-            <img src="imgs/website/img-produtos-residencial.webp" alt="GLP P-13 Residencial" loading="lazy">
+            <img src="imgs/website/img-produtos-residencial.webp" alt="GLP P-13 Residencial" loading="lazy" decoding="async">
             <div class="servico-card__overlay">
               <span class="servico-card__tag">Residencial</span>
             </div>
@@ -321,7 +325,7 @@
         </div>
         <div class="servico-card fade-in">
           <div class="servico-card__img">
-            <img src="imgs/website/img-produtos-industrial.webp" alt="GLP P-20 Industrial" loading="lazy">
+            <img src="imgs/website/img-produtos-industrial.webp" alt="GLP P-20 Industrial" loading="lazy" decoding="async">
             <div class="servico-card__overlay">
               <span class="servico-card__tag">Industrial</span>
             </div>
@@ -341,7 +345,7 @@
         </div>
         <div class="servico-card fade-in">
           <div class="servico-card__img">
-            <img src="imgs/website/img-produtos-comercial.webp" alt="GLP P-45 Comercial" loading="lazy">
+            <img src="imgs/website/img-produtos-comercial.webp" alt="GLP P-45 Comercial" loading="lazy" decoding="async">
             <div class="servico-card__overlay">
               <span class="servico-card__tag">Comercial</span>
             </div>
@@ -420,8 +424,8 @@
       </div>
 
       <div class="maquina24h__images fade-in">
-        <img src="imgs/website/24h-01.webp" alt="Máquina GásFácil 24h BickelKohl" loading="lazy">
-        <img src="imgs/website/24h-02.webp" alt="Máquina GásFácil 24h BickelKohl — vista lateral" loading="lazy">
+        <img src="imgs/website/24h-01.webp" alt="Máquina GásFácil 24h BickelKohl" loading="lazy" decoding="async">
+        <img src="imgs/website/24h-02.webp" alt="Máquina GásFácil 24h BickelKohl — vista lateral" loading="lazy" decoding="async">
       </div>
 
     </div>
@@ -432,7 +436,7 @@
     <div class="container">
       <div class="segmentos__top">
         <div class="segmentos__image fade-in">
-          <img src="imgs/website/img-segmentos.webp" alt="BickelKohl operações" loading="lazy">
+          <img src="imgs/website/img-segmentos.webp" alt="BickelKohl operações" loading="lazy" decoding="async">
         </div>
         <div class="segmentos__text fade-in">
           <p class="section__tag section__tag--dark">Por que a BickelKohl?</p>
