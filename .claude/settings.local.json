@@ -11,7 +11,8 @@
       "Bash(npx --yes sharp-cli --version)",
       "Bash(npm install sharp --save-dev)",
       "Bash(du -sh imgs/website/*.JPG imgs/website/*.jpg)",
-      "Bash(du -sh imgs/website/*.webp)"
+      "Bash(du -sh imgs/website/*.webp)",
+      "Bash(ls \"C:\\\\Users\\\\Usuario\\\\site-bickelkohl\\\\imgs\\\\website\"\" | grep \"img-header \")"
     ]
   }
 }

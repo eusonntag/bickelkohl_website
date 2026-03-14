@@ -157,6 +157,61 @@ telefoneInput.addEventListener('input', (e) => {
   e.target.value = v;
 });
 
+// ===== Gallery Slider (1 foto por vez) =====
+(function () {
+  const track = document.querySelector('.gallery__track');
+  if (!track) return;
+
+  const GAP = 6; // deve coincidir com o gap do CSS
+  const INTERVAL = 3200; // ms entre cada avanço
+  const DURATION = 750;  // ms da transição de slide
+
+  // Duplica os itens para loop infinito contínuo
+  const originals = Array.from(track.querySelectorAll('.gallery__item'));
+  originals.forEach(item => {
+    const clone = item.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+  });
+
+  let index = 0;
+  let locked = false;
+
+  function itemStep() {
+    return track.querySelectorAll('.gallery__item')[0].offsetWidth + GAP;
+  }
+
+  function slideTo(i, animate) {
+    track.style.transition = animate
+      ? `transform ${DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`
+      : 'none';
+    track.style.transform = `translateX(-${i * itemStep()}px)`;
+  }
+
+  function advance() {
+    if (locked) return;
+    locked = true;
+    index++;
+    slideTo(index, true);
+
+    setTimeout(() => {
+      // Ao chegar no início do conjunto clonado, reinicia silenciosamente
+      if (index >= originals.length) {
+        index = 0;
+        slideTo(0, false);
+        // Força reflow para o browser processar o reset sem animação
+        track.getBoundingClientRect();
+      }
+      locked = false;
+    }, DURATION + 50);
+  }
+
+  let timer = setInterval(advance, INTERVAL);
+
+  track.addEventListener('mouseenter', () => clearInterval(timer));
+  track.addEventListener('mouseleave', () => { timer = setInterval(advance, INTERVAL); });
+})();
+
 // ===== Active nav link on scroll =====
 const sections = document.querySelectorAll('section[id]');
 

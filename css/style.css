@@ -476,14 +476,15 @@ section {
 }
 
 .gallery__track {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
+  display: flex;
+  gap: 6px;
+  /* transition gerenciado pelo JS */
 }
 
 .gallery__item {
-  position: relative;
-  aspect-ratio: 16/10;
+  flex-shrink: 0;
+  width: 340px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -492,44 +493,11 @@ section {
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
+  display: block;
 }
 
 .gallery__item:hover img {
-  transform: scale(1.08);
-}
-
-.gallery__item--highlight {
-  background: var(--orange);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gallery__item-content {
-  text-align: center;
-  color: var(--white);
-}
-
-.gallery__item-content svg {
-  margin: 0 auto 8px;
-  opacity: 0.8;
-}
-
-.gallery__item-value {
-  display: block;
-  font-size: 2.4rem;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-
-.gallery__item-label {
-  display: block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.85;
-  margin-top: 4px;
+  transform: scale(1.06);
 }
 
 /* ===== Sobre ===== */
@@ -701,6 +669,92 @@ section {
 .servico-card__link:hover {
   color: var(--orange-dark);
   gap: 12px;
+}
+
+/* ===== Máquina 24h ===== */
+.maquina24h {
+  background: var(--blue-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.maquina24h__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.maquina24h .section__tag {
+  color: var(--orange);
+}
+
+.maquina24h__title {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.maquina24h__desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.maquina24h__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.maquina24h__feature {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.maquina24h__feature svg {
+  color: var(--orange);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.maquina24h__feature strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+
+.maquina24h__feature p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+}
+
+.maquina24h__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.maquina24h__images img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+}
+
+.maquina24h__images img:last-child {
+  margin-top: 56px;
 }
 
 /* ===== Segmentos ===== */
@@ -942,6 +996,41 @@ section {
 .unidade-card p {
   font-size: 0.85rem;
   color: var(--gray-500);
+}
+
+.unidade-card__addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.unidade-card__address {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.unidade-card__address svg {
+  color: var(--orange);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.unidade-card__addr-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+  margin-bottom: 1px;
+}
+
+.unidade-card__addr-text {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  line-height: 1.4;
 }
 
 /* ===== Contato ===== */
@@ -1285,6 +1374,19 @@ section {
     gap: 36px;
   }
 
+  .maquina24h__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .maquina24h__images {
+    order: -1;
+  }
+
+  .maquina24h__images img:last-child {
+    margin-top: 16px;
+  }
+
   .servicos__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1307,13 +1409,9 @@ section {
     gap: 32px;
   }
 
-  .gallery__track {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery__item:nth-child(4),
-  .gallery__item:nth-child(5) {
-    display: none;
+  .gallery__item {
+    width: 260px;
+    height: 180px;
   }
 }
 
@@ -1423,18 +1521,26 @@ section {
     display: none;
   }
 
-  .gallery__track {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery__item:nth-child(3),
-  .gallery__item:nth-child(4),
-  .gallery__item:nth-child(5) {
-    display: none;
+  .gallery__item {
+    width: 200px;
+    height: 150px;
   }
 
   .servicos__grid {
     grid-template-columns: 1fr;
+  }
+
+  .maquina24h__features {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .maquina24h__images {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .maquina24h__images img:last-child {
+    margin-top: 32px;
   }
 
   .segmentos__title {
@@ -1481,5 +1587,13 @@ section {
   .certificacoes__badges {
     flex-direction: column;
     align-items: center;
+  }
+
+  .maquina24h__images img:last-child {
+    display: none;
+  }
+
+  .maquina24h__images {
+    grid-template-columns: 1fr;
   }
 }
